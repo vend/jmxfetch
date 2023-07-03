@@ -54,7 +54,7 @@ public class TestServiceChecks extends TestCommon {
         //  Test application
         SimpleTestJavaApp testApp = new SimpleTestJavaApp();
         // Populate it with a lot of metrics (>350) !
-        testApp.populateHashMap(400);
+        testApp.populateHashMap(2400);
 
         // Exposing a few metrics through JMX
         registerMBean(testApp, "org.datadog.jmxfetch.test:type=ServiceCheckTest");
@@ -67,7 +67,7 @@ public class TestServiceChecks extends TestCommon {
         // Test that an WARNING service check status is sent
         List<Map<String, Object>> serviceChecks = getServiceChecks();
         List<Map<String, Object>> metrics = getMetrics();
-        assertTrue("metricsSize=" + metrics.size(), metrics.size() >= 350);
+        assertTrue("metricsSize=" + metrics.size(), metrics.size() >= 1400);
 
         assertEquals(2, serviceChecks.size());
         Map<String, Object> sc = serviceChecks.get(0);

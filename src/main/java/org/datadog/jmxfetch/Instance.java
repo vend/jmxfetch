@@ -65,7 +65,7 @@ public class Instance {
                     "javax.management.openmbean.TabularData",
                     //Adding TabularDataSupport as it implements TabularData
                     "javax.management.openmbean.TabularDataSupport");
-    private static final int MAX_RETURNED_METRICS = 350;
+    private static final int MAX_RETURNED_METRICS = 1400;
     private static final int DEFAULT_REFRESH_BEANS_PERIOD = 600;
     public static final String PROCESS_NAME_REGEX = "process_name_regex";
     public static final String JVM_DIRECT = "jvm_direct";
