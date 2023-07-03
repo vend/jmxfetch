@@ -24,6 +24,8 @@ pull request.
 
 JMXFetch uses [Maven](http://maven.apache.org) for its build system.
 
+Open in a Mavel container: `docker run -v $(pwd):/data:rw -it --rm maven:latest /bin/bash` then:
+
 In order to generate the jar artifact, simply run the ```mvn clean compile assembly:single``` command in the cloned directory.
 
 The distribution will be created under ```target/```.
